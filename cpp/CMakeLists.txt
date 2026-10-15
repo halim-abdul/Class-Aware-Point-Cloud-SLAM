@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+project(semantic_filter LANGUAGES CXX)
+add_executable(semantic_filter filter.cpp)
+target_compile_features(semantic_filter PRIVATE cxx_std_17)
+enable_testing()
+add_test(NAME filter_smoke COMMAND semantic_filter)
